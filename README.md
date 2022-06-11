@@ -50,3 +50,20 @@ após isso vamos editar o arquivo localizado em **/etc/bind/named.conf.options**
 
 > copiar o script named.conf.options
 
+após isso, rode o comando `named-checkconf` para verificar se a sintaxe está correta.
+
+altere o arquivo **/etc/resolv.conf**
+
+`root@debian:~# echo nameserver 127.0.0.1 > /etc/resolv.conf`
+
+dentro do arquivo em **/etc/nsswitch.conf** mude *host: * para *host: files dns*
+
+após isso, reinicie o serviço do bind9
+
+`root@debian:~# service bind9 restart`
+
+para confirmar se está tudo rodando corretamente:
+
+`root@debian:~# systemctl -l status bind9.service`
+
+---
