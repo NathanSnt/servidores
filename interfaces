@@ -1,10 +1,16 @@
+source  /etc/network/interfaces.d/*
+
+# Interface de loopback
+auto lo
+iface lo inet loopback
+
 # Interface de rede primária
-hot-plug eth0
+allow-hotplug eth0
 auto eth0
 inet eth0 dhcp
 
 # Interface de rede secundária
-hot-plug eth1
+allow-hotplug eth1
 auto eth1
 
 # Caso queira deixar uma configuração automática descomente a linha abaixo
@@ -12,8 +18,10 @@ auto eth1
 
 # Caso queira deixar uma configuração fixa descomente as linhas abaixo e altere os endereços
 #inet eth1 static
-#address 10.0.0.10
+#address 10.0.0.1
 #netmask 255.255.255.0
 #network 10.0.0.0
 #broadcast 10.0.0.255
+
+# Essa linha deverá ser adicionada nos cliente.
 #gateway 10.0.0.1
