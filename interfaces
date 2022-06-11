@@ -1,0 +1,19 @@
+# Interface de rede primária
+hot-plug eth0
+auto eth0
+inet eth0 dhcp
+
+# Interface de rede secundária
+hot-plug eth1
+auto eth1
+
+# Caso queira deixar uma configuração automática descomente a linha abaixo
+#inet eth1 dhcp
+
+# Caso queira deixar uma configuração fixa descomente as linhas abaixo e altere os endereços
+#inet eth1 static
+#address 10.0.0.10
+#netmask 255.255.255.0
+#network 10.0.0.0
+#broadcast 10.0.0.255
+#gateway 10.0.0.1
