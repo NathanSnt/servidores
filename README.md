@@ -37,3 +37,16 @@ rode o script
 `root@debian:~# update`
 
 ---
+
+## **_Configurar serviço bind9(DNS)**_
+
+primeiramente precisamos fazer a instalação dos serviços.
+
+`root@debian:~# apt-get install -y bind9 bind9-doc dnsutils`
+
+após isso vamos editar o arquivo localizado em **/etc/bind/named.conf.options**
+
+`root@debian:~# nano /etc/bind/named.conf.options`
+
+> copiar o script named.conf.options
+
