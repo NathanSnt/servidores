@@ -38,7 +38,7 @@ rode o script
 
 ---
 
-## **_Configurar serviço bind9(DNS)**_
+## **_Configurar serviço bind9(DNS)_**
 
 primeiramente precisamos fazer a instalação dos serviços.
 
@@ -56,7 +56,7 @@ altere o arquivo **/etc/resolv.conf**
 
 `root@debian:~# echo nameserver 127.0.0.1 > /etc/resolv.conf`
 
-dentro do arquivo em **/etc/nsswitch.conf** mude *host: * para *host: files dns*
+dentro do arquivo em **/etc/nsswitch.conf** mude *host:* para *host: files dns*
 
 após isso, reinicie o serviço do bind9
 
