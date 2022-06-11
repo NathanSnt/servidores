@@ -1,0 +1,24 @@
+options {
+  directory "/var/cache/bind";
+
+  forwarders { 
+    // Servidor DNS da Google
+    8.8.8.8;
+    8.8.4.4;
+
+    // servidor DNS da CISCO (OpenDNS)
+    208.67.222.222;
+    208.67.220.220;
+  };
+
+  // Opções de segurança
+  listen-on port 53 { 127.0.0.1; 10.0.0.1; };
+  allow-query { 127.0.0.1; 10.0.0.0/24; };
+  allow-recursion { 127.0.0.1; 10.0.0.0/24; };
+  allow-transfer { none; };
+  
+  dnssec-validation auto;
+  
+  auth-nxdomain no;
+  listen-on-v6 { any; };
+};
